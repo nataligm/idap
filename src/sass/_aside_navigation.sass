@@ -1,0 +1,69 @@
+.sidebar
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  background-color: #1c2126
+  width: 88px
+  padding: 30px 20px
+  left: 0
+  top: 0
+  color: #787878
+  min-height: 600px
+  //employer asked min-height
+  .sidebar__item
+    position: relative
+    display: flex
+    justify-content: center
+    &:not(.sidebar__settings)
+      margin-bottom: 33px
+      padding-bottom: 37px
+    &:not(.sidebar__avatar)
+      padding-top: 55px
+
+  .sidebar__avatar
+    &:before
+      position: absolute
+      content: url('../images/mails.png')
+      top: 0
+      right: 0
+      width: 31px
+      height: 31px
+    &:after
+      @include dots_decoration
+  .sidebar__my-page-link
+    width: 88px
+    margin: 0 auto
+  .sidebar__board
+    &:before
+      @include sidebar_icon
+      content: url('../images/icons/board_icon.png')
+    &:after
+      @include dots_decoration
+  .sidebar__projects
+    &:before
+      @include sidebar_icon
+      content: url("../images/icons/projects_icon.png")
+      left: 28px
+      width: 33px
+      height: 27px
+    &:after
+      @include dots_decoration
+  .sidebar__settings
+    &:before
+      @include sidebar_icon
+      content: url("../images/icons/settings_icon.png")
+      left: 23px
+  .sidebar__upgrade
+    &:before
+      @include sidebar_icon
+      content: url("../images/icons/upgrade_icon.png")
+      left: 22px
+    &:after
+      @include dots_decoration
+  .sidebar__logout
+    margin-bottom: 0
+    //doesn't work
+    &:before
+      @include sidebar_icon
+      content: url("../images/icons/logout_icon.png")
+      left: 22px
