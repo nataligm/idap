@@ -3,6 +3,7 @@ $(document).ready(function() {
         placeholder: $('.dashboard-panel__user-online').data('usersOnline'),
         allowClear: true,
         minimumResultsForSearch: -1,
-        width: 'style'
+        dropdownCssClass: 'dashboard-panel__user-online__dropdown',
+        width: '173px'
     });
 });
