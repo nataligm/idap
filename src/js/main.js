@@ -3,6 +3,6 @@ $(document).ready(function() {
         placeholder: $('.dashboard-panel__user-online').data('usersOnline'),
         allowClear: true,
         minimumResultsForSearch: -1,
-        width: 'resolve'
+        width: 'style'
     });
 });
