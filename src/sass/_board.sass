@@ -135,44 +135,43 @@
 //end of dashboard panel*********************************
 .member-column
   width: 30%
-  overflow: auto
-  .member-column__info
-    font-family: 'FreightSansSemibold', sans-serif
-    color: #909090
-    padding: 30px 0 30px 29px
-    border: 1px solid #eaeaea
-    width: 100%
-    box-sizing: border-box
-  .member-column__sentence
-    letter-spacing: -0.45px
-    margin-bottom: 4px
-  .member-column__name
-    font-weight: bold
-    color: #4b4b4b
-  .member-column__date
-    font-size: 14px
-  .member-column__photo_online, .member-column__photo_offline
-    width: 41px
-    height: 41px
-    //float: left
-    padding-right: 4px
-    position: relative
-    display: inline-block
-    &:before
-      content: url('')
-      width: 8px
-      height: 8px
-      border: 2px solid #ffffff
-      background-color: #aacc4e
-      border-radius: 50%
-      position: absolute
-      left: 0
-  .member-column__photo_offline
-    &:before
-      background-color: #c5c5c5
-  .member-column__message
-    display: inline-block
-    vertical-align: middle
+  overflow-y: auto
+.member-column__info
+  font-family: 'FreightSansSemibold', sans-serif
+  color: #909090
+  padding: 30px 0 30px 29px
+  border: 1px solid #eaeaea
+  width: 100%
+  box-sizing: border-box
+.member-column__sentence
+  letter-spacing: -0.45px
+  margin-bottom: 4px
+.member-column__name
+  font-weight: bold
+  color: #4b4b4b
+.member-column__date
+  font-size: 14px
+.member-column__photo_online, .member-column__photo_offline
+  width: 41px
+  height: 41px
+  padding-right: 4px
+  position: relative
+  display: inline-block
+  &:before
+    content: ''
+    width: 8px
+    height: 8px
+    border: 2px solid #ffffff
+    background-color: #aacc4e
+    border-radius: 50%
+    position: absolute
+    left: 0
+.member-column__photo_offline
+  &:before
+    background-color: #c5c5c5
+.member-column__message
+  display: inline-block
+  vertical-align: middle
 .member-column__activity
   padding: 21px 0 15px 31px
   border: 1px solid #eaeaea
@@ -186,12 +185,13 @@
 
 //main***************************
 .main
-  display: flex
-  flex-direction: column
+  //display: flex
+  //flex-direction: column
   width: 70%
-  justify-content: flex-start
+  //justify-content: flex-start
   color: #4b4b4b
   margin-right: 20px
+  overflow-y: auto
 
 .main__block-wrapper
   display: flex
@@ -225,14 +225,23 @@
   display: flex
   flex-direction: column
 .main-wrap__tabs
+  //display: flex
+  padding-right: 130px
+  background-color: #f1f1f1
+.main-wrap__tabs-only
   display: flex
-
+  border: 1px solid black
 .main-wrap__tabs__projects,.main-wrap__tabs__messenger
   display: flex
   padding: 34px 73px 24px 90px
   position: relative
   border: 1px solid #d3d7da
-
+.main-wrap__tabs__messenger
+  &:before
+    @include tabs_messenger_icon
+.main-wrap__tabs__projects
+  &:before
+    @include tabs_projects_icon
 .main-wrap__item-notifications
   @include item-notifications_circle
   background-color: #adadad
@@ -245,6 +254,11 @@
   right: 37px
   top: 15px
 
+.main-wrap__description
+  border: 1px solid black
+  color: #c1c1c1
+  letter-spacing: -0.55px
+  font-size: 22px
 .main__task-title
   display: inline-block
 //main-actions  ***************************
