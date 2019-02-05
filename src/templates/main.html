@@ -1,13 +1,15 @@
-<div class="main-container">
+<div class="main-wrap">
     @@include('../templates/_dashboard-panel.html')
-    <!--<div class="tabs">-->
-    <!--<div class="active-projects">-->
-    <!--<span>9</span>-->
-    <!--</div>-->
-    <!--<div class="messenger">-->
-    <!--<span>2</span>-->
-    <!--</div>-->
-    <!--</div>-->
+    <div class="main-wrap__tabs">
+        <div class="main-wrap__tabs__projects">
+            Active Projects
+            <div class="main-wrap__item-notifications">9</div>
+        </div>
+        <div class="main-wrap__tabs__messenger">
+            Messenger
+            <div class="main-wrap__item-notifications_active">2</div>
+        </div>
+    </div>
 
     <div class="main__block-wrapper">
         <main class="main">
@@ -90,6 +92,9 @@
                     <div class="main__show"></div>
                     <div class="main__expand"></div>
                 </div>
+            </div>
+            <div class="main__active-project">
+                Project Archiv
             </div>
         </main>
 

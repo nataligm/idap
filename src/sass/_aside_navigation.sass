@@ -1,116 +1,84 @@
 .sidebar
-  display: flex
   position: relative
-  flex-direction: column
   justify-content: space-between
   background-color: #1c2126
-  width: 88px
-  padding: 30px 20px
   left: 0
   top: 0
   color: #787878
   height: 100%
   box-sizing: border-box
+  padding: 30px 20px
   //min-height: 820px
   //employer asked min-height
-  .sidebar__item
-    position: relative
-    display: flex
-    justify-content: center
-    cursor: pointer
-    &:not(.sidebar__settings)
-      margin-bottom: 33px
-      padding-bottom: 37px
-    &:not(.sidebar__avatar)
-      padding-top: 55px
+.sidebar__item
+  border: 1px solid white
+  position: relative
+  display: flex
+  justify-content: center
+  cursor: pointer
+  &:not(.sidebar__settings)
+    margin-bottom: 33px
+    padding-bottom: 37px
+  &:not(.sidebar__avatar)
+    padding-top: 55px
 
-    .sidebar__item-notifications--active
-      position: absolute
-      background-color: #ff503f
-      top: -20px
-      right: 2px
-      width: 31px
-      height: 31px
-      border-radius: 31px
-      text-align: center
-      display: flex
-      align-items: center
-      justify-content: center
-      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35)
-      color: #ffffff
-      font-size: 16px
-      font-weight: 700
-      line-height: 37.5px
-      letter-spacing: -0.4px
+  .sidebar__item-notifications_active
+    background-color: #ff503f
+    @include item-notifications_circle
+  .sidebar__item-notifications
+    background-color: #adadad
+    @include item-notifications_circle
+  .sidebar__item-notifications_empty
+    display: none
+.sidebar__first-part
+  //margin-bottom: 50px
+  .sidebar__avatar
+    .sidebar__item-notifications_active
+      top: 1px
+      right: -2px
     .sidebar__item-notifications
-      position: absolute
-      background-color: #adadad
-      top: -20px
-      right: 2px
-      width: 31px
-      height: 31px
-      border-radius: 31px
-      text-align: center
-      display: flex
-      align-items: center
-      justify-content: center
-      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35)
-      color: #ffffff
-      font-size: 16px
-      font-weight: 700
-      line-height: 37.5px
-      letter-spacing: -0.4px
-    .sidebar__item-notifications--empty
-      display: none
-  .sidebar__first-part
-    //margin-bottom: 50px
-    .sidebar__avatar
-      .sidebar__item-notifications--active
-        top: 1px
-        right: -2px
-      .sidebar__item-notifications
-        top: 1px
-        right: -2px
-      &:after
-        @include dots_decoration
-    .sidebar__my-page-link
-      width: 88px
-      margin: 0 auto
-    .sidebar__board
-      &:before
-        @include sidebar_icon
-        content: url('../images/icons/board_icon.png')
-      &:after
-        @include dots_decoration
-    .sidebar__projects
-      &:before
-        @include sidebar_icon
-        content: url("../images/icons/projects_icon.png")
-        left: 28px
-        width: 33px
-        height: 27px
-      &:after
-        @include dots_decoration
-    .sidebar__settings
-      &:before
-        @include sidebar_icon
-        content: url("../images/icons/settings_icon.png")
-        left: 23px
-  .sidebar__second-part
-    //position: absolute
-    //bottom: 0
-    margin-top: auto
-    .sidebar__upgrade
-      &:before
-        @include sidebar_icon
-        content: url("../images/icons/upgrade_icon.png")
-        left: 22px
-      &:after
-        @include dots_decoration
-    .sidebar__logout
-      margin-bottom: 0
-      //doesn't work
-      &:before
-        @include sidebar_icon
-        content: url("../images/icons/logout_icon.png")
-        left: 22px
+      top: 1px
+      right: -2px
+    &:after
+      @include dots_decoration
+  .sidebar__my-page-link
+    width: 88px
+  .sidebar__board
+    &:before
+      @include sidebar_icon
+      content: url('../images/icons/board_icon.png')
+    &:after
+      @include dots_decoration
+  .sidebar__projects
+    &:before
+      @include sidebar_icon
+      content: url("../images/icons/projects_icon.png")
+      left: 28px
+      width: 33px
+      height: 27px
+    &:after
+      @include dots_decoration
+  .sidebar__settings
+    margin-bottom: 418px
+    &:before
+      @include sidebar_icon
+      content: url("../images/icons/settings_icon.png")
+      left: 23px
+.sidebar__second-part
+  //position: absolute
+  //bottom: 0
+
+  .sidebar__upgrade
+    &:before
+      @include sidebar_icon
+      content: url("../images/icons/upgrade_icon.png")
+      left: 22px
+    &:after
+      @include dots_decoration
+  .sidebar__logout
+    margin-bottom: 0
+    //doesn't work
+    &:before
+      @include sidebar_icon
+      content: url("../images/icons/logout_icon.png")
+      left: 22px

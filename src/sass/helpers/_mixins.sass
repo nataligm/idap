@@ -4,10 +4,44 @@
     top: 0
     width: 40px
     height: 40px
-@mixin  dots_decoration
+@mixin dots_decoration
     position: absolute
     content: url('../../images/trenner.png')
     bottom: 0
     left: 32px
-    //width: 25px
-    //height: 5px
+@mixin gray_arrow
+    position: absolute
+    content: ''
+    width: 5px
+    height: 5px
+    left: 13px
+    top: 12px
+    border: solid #a6a6a6
+    border-width: 0 2px 2px 0
+    transform: rotate(-45deg)
+@mixin gray_arrow_archiv
+    position: absolute
+    content: ''
+    width: 5px
+    height: 5px
+    border: solid #a6a6a6
+    border-width: 0 2px 2px 0
+    transform: rotate(-45deg)
+    left: 140px
+    top: 27px
+@mixin item-notifications_circle
+    position: absolute
+    top: -20px
+    right: 2px
+    width: 31px
+    height: 31px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35)
+    color: #ffffff
+    font-size: 16px
+    font-weight: 700
+    line-height: 37.5px
+    letter-spacing: -0.4px
