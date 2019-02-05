@@ -185,10 +185,7 @@
 
 //main***************************
 .main
-  //display: flex
-  //flex-direction: column
   width: 70%
-  //justify-content: flex-start
   color: #4b4b4b
   margin-right: 20px
   overflow-y: auto
@@ -204,33 +201,23 @@
   padding: 30px
   box-sizing: border-box
   width: 100%
-
-.main__ready-percent
-  display: inline-block
-  box-sizing: border-box
-  width: 57px
-  height: 33px
-  background-color: #ff503f
-  font-size: 18px
-  letter-spacing: -0.45px
-  color: #ffffff
-  line-height: 20px
-  text-align: center
-  border-radius: 4px
-  padding: 8px 0
-  margin-right: 8px
+.main__task_active
+  flex-direction: column
+.main__ready-percent, .main__subtask_ready-percent
+  @include ready-percent-block
 
 .main-wrap
   width: 100%
   display: flex
   flex-direction: column
 .main-wrap__tabs
-  //display: flex
+  display: flex
+  flex: none
+  justify-content: space-between
   padding-right: 130px
   background-color: #f1f1f1
 .main-wrap__tabs-only
   display: flex
-  border: 1px solid black
 .main-wrap__tabs__projects,.main-wrap__tabs__messenger
   display: flex
   padding: 34px 73px 24px 90px
@@ -261,6 +248,11 @@
   font-size: 22px
 .main__task-title
   display: inline-block
+.main__info-actions
+  border: 1px solid darkgreen
+  display: flex
+  justify-content: space-between
+
 //main-actions  ***************************
 .main__actions
   display: flex
@@ -309,4 +301,15 @@
   position: relative
   &:after
     @include gray_arrow_archiv
+.main__subtasks
+  border: 1px solid orange
+  background-color: #f1f1f1
+  //display: flex
+.main__subtask_ready-percent
+  background-color: transparent
+  border: 1px solid rgba(164, 164, 164, 0.53)
+  color: #bebebe
+.main___subtasks__task
+  border: 1px solid black
+  padding: 23px 0
 
