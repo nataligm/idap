@@ -383,6 +383,12 @@
     @include gray_arrow
     transform: rotate(45deg)
 
+.main__task_active
+  .main__expand
+    &:after
+      @include gray_arrow
+      transform: rotate(225deg)
+
 .main__show:hover
   background-color: #ff503f
   &:after

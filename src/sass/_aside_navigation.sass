@@ -1,6 +1,8 @@
 .sidebar
   position: relative
   justify-content: space-between
+  display: flex
+  flex-direction: column
   background-color: #1c2126
   left: 0
   top: 0
@@ -8,7 +10,7 @@
   height: 100%
   box-sizing: border-box
   padding: 30px 20px
-  overflow-y: scroll
+  overflow-y: auto
   //min-height: 820px
   //employer asked min-height
 .sidebar__item
@@ -59,7 +61,7 @@
     &:after
       @include dots_decoration
   .sidebar__settings
-    margin-bottom: 418px
+    margin-bottom: 55px
     &:before
       @include sidebar_icon
       content: url("../images/icons/settings_icon.png")
