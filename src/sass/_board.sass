@@ -1,6 +1,6 @@
 //dashboard panel******************************************
 .select2-container--default
-  .dashboard-panel__user-online__dropdown
+  .select2-dropdown__option
     background-color: #f1f1f1
     .select2-results__option
       background-color: #f1f1f1
@@ -15,6 +15,67 @@
       background-color: #777777
       color: #f1f1f1
 
+.select2.select2-container.select2-container--default.select2-container--open
+  .select2-selection.select2-selection--single
+    .select2-selection__rendered
+      border-radius: 20px 20px 0 0
+      &:after
+        content: ''
+        position: absolute
+        width: 5px
+        height: 5px
+        border: solid #a6a6a6
+        border-width: 0 2px 2px 0
+        transform: rotate(225deg)
+        right: 13px
+        top: 16px
+.select2.select2-container.select2-container--default
+  .select2-selection__arrow
+    display: none
+  .select2-selection.select2-selection--single
+    border: none
+    background-color: #f1f1f1
+    padding: 0
+    .select2-selection__rendered
+      width: 100%
+      box-sizing: border-box
+      display: inline-block
+      background-color: #f1f1f1
+      padding: 9px 27px 9px 38px
+      border-radius: 50px 50px 50px 50px
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.52)
+      border: 1px solid rgba(164, 164, 164, 0.53)
+      color: #4b4b4b
+      font-family: "Freight Sans Pro Semibold", sans-serif
+      font-size: 14px
+      line-height: 20px
+      text-transform: uppercase
+      position: relative
+      float: right
+      font-weight: 400
+      letter-spacing: -0.35px
+      &:before
+        content: url("../images/icon.png")
+        position: absolute
+        top: 10px
+        left: 16px
+        width: 18px
+        height: 18px
+      &:after
+        content: ''
+        position: absolute
+        width: 5px
+        height: 5px
+        border: solid #a6a6a6
+        border-width: 0 2px 2px 0
+        transform: rotate(45deg)
+        right: 13px
+        top: 13px
+      .select2-selection__clear
+        color: #a6a6a6
+      .select2-selection__placeholder
+        color: #4b4b4b
+
 .dashboard-panel
   display: flex
   padding: 30px 30px
@@ -24,7 +85,6 @@
 
   .dashboard-panel__leftside
     width: 165px
-    border: 1px solid black
     .dashboard-panel__button_round-red
       width: 41px
       height: 41px
@@ -53,7 +113,6 @@
   .dashboard-panel__rightside
     width: 221px
     height: 41px
-    border: 1px solid black
     .dashboard-panel__button_round-green
       display: inline-block
       padding-top: 15px
@@ -65,66 +124,6 @@
       margin-right: 7px
     .dashboard-panel__user-online
       width: 100%
-    .select2.select2-container.select2-container--default.select2-container--open
-      .select2-selection.select2-selection--single
-        .select2-selection__rendered
-          border-radius: 20px 20px 0 0
-          &:after
-            content: ''
-            position: absolute
-            width: 5px
-            height: 5px
-            border: solid #a6a6a6
-            border-width: 0 2px 2px 0
-            transform: rotate(225deg)
-            right: 13px
-            top: 16px
-    .select2.select2-container.select2-container--default
-      .select2-selection__arrow
-        display: none
-      .select2-selection.select2-selection--single
-        border: none
-        background-color: #f1f1f1
-        padding: 0
-        .select2-selection__rendered
-          width: 100%
-          box-sizing: border-box
-          display: inline-block
-          background-color: #f1f1f1
-          padding: 9px 27px 9px 38px
-          border-radius: 50px 50px 50px 50px
-          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.52)
-          border: 1px solid rgba(164, 164, 164, 0.53)
-          color: #4b4b4b
-          font-family: "Freight Sans Pro Semibold", sans-serif
-          font-size: 14px
-          line-height: 20px
-          text-transform: uppercase
-          position: relative
-          float: right
-          font-weight: 400
-          letter-spacing: -0.35px
-          &:before
-            content: url("../images/icon.png")
-            position: absolute
-            top: 10px
-            left: 16px
-            width: 18px
-            height: 18px
-          &:after
-            content: ''
-            position: absolute
-            width: 5px
-            height: 5px
-            border: solid #a6a6a6
-            border-width: 0 2px 2px 0
-            transform: rotate(45deg)
-            right: 13px
-            top: 13px
-          .select2-selection__clear
-            color: #a6a6a6
-          .select2-selection__placeholder
-            color: #4b4b4b
     .dashboard-panel__arrow
       width: 5px
       height: 5px
@@ -135,7 +134,8 @@
 //end of dashboard panel*********************************
 .member-column
   width: 30%
-  overflow-y: auto
+  overflow-y: scroll
+
 .member-column__info
   font-family: 'FreightSansSemibold', sans-serif
   color: #909090
@@ -143,14 +143,18 @@
   border: 1px solid #eaeaea
   width: 100%
   box-sizing: border-box
+
 .member-column__sentence
   letter-spacing: -0.45px
   margin-bottom: 4px
+
 .member-column__name
   font-weight: bold
   color: #4b4b4b
+
 .member-column__date
   font-size: 14px
+
 .member-column__photo_online, .member-column__photo_offline
   width: 41px
   height: 41px
@@ -158,20 +162,15 @@
   position: relative
   display: inline-block
   &:before
-    content: ''
-    width: 8px
-    height: 8px
-    border: 2px solid #ffffff
-    background-color: #aacc4e
-    border-radius: 50%
-    position: absolute
-    left: 0
+    @include photo_online-indicator
 .member-column__photo_offline
   &:before
     background-color: #c5c5c5
+
 .member-column__message
   display: inline-block
   vertical-align: middle
+
 .member-column__activity
   padding: 21px 0 15px 31px
   border: 1px solid #eaeaea
@@ -182,17 +181,16 @@
     left: 140px
     top: 27px
 
-
 //main***************************
+.main__block-wrapper
+  display: flex
+  padding: 30px
+
 .main
   width: 70%
   color: #4b4b4b
   margin-right: 20px
-  overflow-y: auto
-
-.main__block-wrapper
-  display: flex
-  padding: 30px
+  overflow-y: scroll
 
 .main__task
   display: flex
@@ -201,34 +199,83 @@
   padding: 30px
   box-sizing: border-box
   width: 100%
+
+.main__search-container
+  width: 41%
+  border: 1px solid black
+  display: flex
+  align-items: center
+  input
+    width: 100%
+    height: 25px
+    letter-spacing: -0.55px
+    font-size: 22px
+    padding-left: 30px
+    padding-right: 30px
+.main__new-projects
+  display: inline-block
+  border-radius: 50px
+  padding: 14px 42px 10px 21px
+  border: 1px solid rgba(164, 164, 164, 0.5)
+  letter-spacing: -0.4px
+  position: relative
+  &:after
+    @include gray_arrow
+
+.main__descending
+  font-weight: normal
+
 .main__task_active
   flex-direction: column
+  padding: 0
+
 .main__ready-percent, .main__subtask_ready-percent
   @include ready-percent-block
+
+.main__subtask_ready-percent
+  background-color: transparent
+  border: 1px solid rgba(164, 164, 164, 0.53)
+  color: #bebebe
 
 .main-wrap
   width: 100%
   display: flex
   flex-direction: column
+
 .main-wrap__tabs
   display: flex
   flex: none
   justify-content: space-between
   padding-right: 130px
   background-color: #f1f1f1
+  border-bottom: 1px solid #d3d7da
+
 .main-wrap__tabs-only
   display: flex
-.main-wrap__tabs__projects,.main-wrap__tabs__messenger
+
+.main-wrap__tabs__projects, .main-wrap__tabs__messenger
   display: flex
   padding: 34px 73px 24px 90px
   position: relative
   border: 1px solid #d3d7da
+  border-bottom: none
+
 .main-wrap__tabs__messenger
+  background-color: #f8f8f8
   &:before
     @include tabs_messenger_icon
+
 .main-wrap__tabs__projects
+  background-color: #f8f8f8
   &:before
     @include tabs_projects_icon
+
+.active-tab
+  background-color: white
+  border-bottom: none
+  &:after
+    @include active-tab__border_hidden
+
 .main-wrap__item-notifications
   @include item-notifications_circle
   background-color: #adadad
@@ -242,16 +289,19 @@
   top: 15px
 
 .main-wrap__description
-  border: 1px solid black
   color: #c1c1c1
   letter-spacing: -0.55px
   font-size: 22px
+  display: flex
+  align-self: center
+
 .main__task-title
   display: inline-block
+
 .main__info-actions
-  border: 1px solid darkgreen
   display: flex
   justify-content: space-between
+  padding: 30px 30px
 
 //main-actions  ***************************
 .main__actions
@@ -270,20 +320,12 @@
   margin-right: 8px
 
 .main__show, .main__expand
-  width: 33px
-  height: 33px
-  border-radius: 50%
-  border: 1px solid rgba(164, 164, 164, 0.53)
+  @include gray_circle
 
 .main__show, .main__expand
   position: relative
   &:after
-    position: absolute
-    content: url("../images/icons/search.png")
-    width: 12px
-    height: 12px
-    left: 11px
-    top: 10px
+    @include main__show-icon
 
 .main__expand
   &:after
@@ -301,15 +343,62 @@
   position: relative
   &:after
     @include gray_arrow_archiv
+
 .main__subtasks
-  border: 1px solid orange
   background-color: #f1f1f1
-  //display: flex
-.main__subtask_ready-percent
-  background-color: transparent
-  border: 1px solid rgba(164, 164, 164, 0.53)
-  color: #bebebe
+.main___subtasks-member, .main___subtasks-member_offline
+  width: 33px
+  height: 33px
+  position: relative
+  margin-right: 5px
+  &:before
+    @include photo_online-indicator
+.main___subtasks-member_offline
+  &:before
+    background-color: #c5c5c5
+.main___subtasks__more-users
+  @include gray_circle
+  color: #a7a7a7
+  letter-spacing: -0.3px
+  font-size: 13px
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-right: 9px
 .main___subtasks__task
-  border: 1px solid black
-  padding: 23px 0
+  padding: 23px 30px
+  display: flex
+  justify-content: space-between
+  .main__show
+    margin-right: 0
+  &:first-child
+    border-bottom: 1px solid #d3d7da
+    border-top: 1px solid #d3d7da
+  &:nth-child(2)
+    border-bottom: 1px solid #d3d7da
+  .main__ready-percent
+    color: #bebebe
+    background-color: transparent
+    border: 1px solid rgba(164, 164, 164, 0.53)
+    font-size: 12px
+    font-weight: 700
+    text-transform: uppercase
+  .main__task-title
+    color: #4b4b4b
+  .main__task-title_crossed-out
+    text-decoration: line-through
+    letter-spacing: -0.5px
+    color: #838383
+    opacity: 0.5
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.31)
+    display: inline-block
+    position: relative
+    &:after
+      @include crossed-title-tick
+  .main__tag
+    padding-left: 40px
+    padding-right: 20px
+    position: relative
+    &:before
+      @include main__subtask-arrow
 

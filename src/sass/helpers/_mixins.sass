@@ -1,75 +1,127 @@
 @mixin sidebar_icon
-    position: absolute
-    left: 25px
-    top: 0
-    width: 40px
-    height: 40px
+  position: absolute
+  left: 25px
+  top: 0
+  width: 40px
+  height: 40px
+
 @mixin dots_decoration
-    position: absolute
-    content: url('../../images/trenner.png')
-    bottom: 0
-    left: 32px
+  position: absolute
+  content: url('../../images/trenner.png')
+  bottom: 0
+  left: 32px
+
 @mixin gray_arrow
-    position: absolute
-    content: ''
-    width: 5px
-    height: 5px
-    left: 13px
-    top: 12px
-    border: solid #a6a6a6
-    border-width: 0 2px 2px 0
-    transform: rotate(-45deg)
+  position: absolute
+  content: ''
+  width: 5px
+  height: 5px
+  left: 13px
+  top: 12px
+  border: solid #a6a6a6
+  border-width: 0 2px 2px 0
+  transform: rotate(-45deg)
+
 @mixin gray_arrow_archiv
-    position: absolute
-    content: ''
-    width: 5px
-    height: 5px
-    border: solid #a6a6a6
-    border-width: 0 2px 2px 0
-    transform: rotate(-45deg)
-    left: 140px
-    top: 27px
+  position: absolute
+  content: ''
+  width: 5px
+  height: 5px
+  border: solid #a6a6a6
+  border-width: 0 2px 2px 0
+  transform: rotate(-45deg)
+  left: 140px
+  top: 27px
+
 @mixin item-notifications_circle
-    position: absolute
-    top: -20px
-    right: 2px
-    width: 31px
-    height: 31px
-    border-radius: 50%
-    display: flex
-    align-items: center
-    justify-content: center
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35)
-    color: #ffffff
-    font-size: 16px
-    font-weight: 700
-    line-height: 37.5px
-    letter-spacing: -0.4px
+  position: absolute
+  top: -20px
+  right: 2px
+  width: 31px
+  height: 31px
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35)
+  color: #ffffff
+  font-size: 16px
+  font-weight: 700
+  line-height: 37.5px
+  letter-spacing: -0.4px
+
 @mixin tabs_messenger_icon
-    content: url("../images/icons/messenger.png")
-    position: absolute
-    left: 34px
-    top: 28px
-    width: 45px
-    height: 27px
+  content: url("../images/icons/messenger.png")
+  position: absolute
+  left: 34px
+  top: 28px
+  width: 45px
+  height: 27px
+
 @mixin tabs_projects_icon
-    content: url("../images/icons/active_projects.png")
-    position: absolute
-    left: 34px
-    top: 21px
-    width: 40px
-    height: 40px
+  content: url("../images/icons/active_projects.png")
+  position: absolute
+  left: 34px
+  top: 21px
+  width: 40px
+  height: 40px
+
 @mixin ready-percent-block
-    display: inline-block
-    box-sizing: border-box
-    width: 57px
-    height: 33px
-    background-color: #ff503f
-    font-size: 18px
-    letter-spacing: -0.45px
-    color: #ffffff
-    line-height: 20px
-    text-align: center
-    border-radius: 4px
-    padding: 8px 0
-    margin-right: 8px
+  display: inline-block
+  box-sizing: border-box
+  width: 57px
+  height: 33px
+  background-color: #ff503f
+  font-size: 18px
+  letter-spacing: -0.45px
+  color: #ffffff
+  line-height: 20px
+  text-align: center
+  border-radius: 4px
+  padding: 8px 0
+  margin-right: 8px
+
+@mixin active-tab__border_hidden
+  position: absolute
+  content: ''
+  width: 100%
+  height: 10px
+  bottom: -2px
+  left: 0
+  background-color: #ffffff
+
+@mixin crossed-title-tick
+  position: absolute
+  content: url("../images/icons/crossed_title_tick.png")
+  width: 16px
+  height: 13px
+  top: 0
+  right: -30px
+@mixin main__show-icon
+  position: absolute
+  content: url("../images/icons/search.png")
+  width: 12px
+  height: 12px
+  left: 11px
+  top: 10px
+@mixin main__subtask-arrow
+  position: absolute
+  content: url("../images/icons/main_subtask_tagarrow.png")
+  width: 12px
+  height: 13px
+  top: 13px
+  left: 20px
+@mixin photo_online-indicator
+  position: absolute
+  content: ''
+  width: 8px
+  height: 8px
+  border: 2px solid #ffffff
+  background-color: #aacc4e
+  border-radius: 50%
+  left: 0
+@mixin gray_circle
+  width: 32px
+  height: 32px
+  border-radius: 50%
+  border: 1px solid rgba(164, 164, 164, 0.53)

@@ -2,7 +2,7 @@
     @@include('../templates/_dashboard-panel.html')
     <div class="main-wrap__tabs">
         <div class="main-wrap__tabs-only">
-            <div class="main-wrap__tabs__projects">
+            <div class="main-wrap__tabs__projects active-tab">
                 Active Projects
                 <div class="main-wrap__item-notifications">9</div>
             </div>
@@ -11,12 +11,25 @@
                 <div class="main-wrap__item-notifications_active">2</div>
             </div>
         </div>
-
         <div class="main-wrap__description">Search Project, User, Task, etc...</div>
     </div>
 
     <div class="main__block-wrapper">
         <main class="main">
+            <div class="main__task">
+                <div class="main__search-container">
+                    <input type="search" placeholder="Search a Project with Name, Task, User..." name="search">
+                </div>
+                <div class="main__actions">
+                    <select class="dashboard-panel__user-online-2 main__new-projects" data-users-online="5 User ONLINE">
+                        <option value="1">New Projects <span class="main__descending">(descending)</span></option>
+                        <option value="2">Old Projects <span class="main__descending">(ascending)</span></option>
+                    </select>
+                    <!--<div class="main__new-projects">-->
+                        <!--New Projects <span class="main__descending">(descending)</span>-->
+                    <!--</div>-->
+                </div>
+            </div>
             <div class="main__task">
                 <div class="main__info">
                     <div class="main__ready-percent">23%</div>
@@ -54,13 +67,39 @@
                 </div>
                 <div class="main__subtasks">
                     <div class="main___subtasks__task">
-                        <div class="main__subtask_ready-percent">66%</div>
-                        <div class="main__task-title">Creating the Context</div>
+                        <div class="main__info">
+                            <div class="main__subtask_ready-percent">66%</div>
+                            <div class="main__task-title">Creating the Context</div>
+                        </div>
+                        <div class="main__actions">
+                            <figure class="main___subtasks-member">
+                                <img src="../images/markP.png" alt="member-photo">
+                            </figure>
+                            <figure class="main___subtasks-member">
+                                <img src="../images/avatar.jpg" alt="member-photo">
+                            </figure>
+                            <figure class="main___subtasks-member_offline">
+                                <img src="../images/sebastianK.png" alt="member-photo"></figure>
+                            <div class="main___subtasks__more-users">&#43;3</div>
+                            <div class="main__tag">Today, 13:40 PM</div>
+                            <div class="main__show"></div>
+                        </div>
                     </div>
                     <div class="main___subtasks__task">
-                        <div class="main__ready-percent">Ready</div>
-                        <div class="main__task-title">Implementation in the Layout</div>
+                        <div class="main-info">
+                            <div class="main__ready-percent">Ready</div>
+                            <div class="main__task-title_crossed-out">Implementation in the Layout</div>
+                        </div>
+                        <div class="main__actions">
 
+                            <figure class="main___subtasks-member">
+                                <img src="../images/avatar.jpg" alt="member-photo">
+                            </figure>
+                            <figure class="main___subtasks-member_offline">
+                                <img src="../images/sebastianK.png" alt="member-photo"></figure>
+                            <div class="main__tag">Yestarday, 12:40 PM</div>
+                            <div class="main__show"></div>
+                        </div>
                     </div>
                 </div>
             </div>
