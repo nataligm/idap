@@ -161,7 +161,12 @@
 //end of dashboard panel*********************************
 .member-column
   width: 30%
-  overflow-y: scroll
+  display: flex
+  flex-direction: column
+  border: 1px solid #eaeaea
+  .members
+    overflow-y: auto
+    height: 100%
 
 .member-column__info
   font-family: 'FreightSansSemibold', sans-serif
@@ -217,15 +222,23 @@
   width: 70%
   color: #4b4b4b
   margin-right: 20px
-  overflow-y: scroll
-
-.main__task
   display: flex
+  flex-direction: column
   border: 1px solid #eaeaea
-  justify-content: space-between
-  padding: 11px 30px
+  .main_tasks
+    overflow-y: auto
+    height: 100%
+
+.main__task, main__task-expanded, main__seacrh-panel
+  border: 1px solid #eaeaea
   box-sizing: border-box
   width: 100%
+  flex-direction: column
+  padding: 0
+.main__seacrh-panel
+  padding: 11px 30px
+  display: flex
+  justify-content: space-between
 
 .main__search-container
   width: 41%
@@ -384,6 +397,7 @@
 
 .main__subtasks
   background-color: #f1f1f1
+  display: none
 .main___subtasks-member, .main___subtasks-member_offline
   width: 33px
   height: 33px
