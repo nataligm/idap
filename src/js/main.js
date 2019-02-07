@@ -1,8 +1,13 @@
-function formatSelectionWithSpan (selection) {
+function formatSelectionParenthesesWithSpan (selection) {
     if (!selection.id) {
         return selection.text;
     }
-    return $('<div class="main__new-projects">New Projects <span class="main__descending">(descending)</span></div>');
+    console.log(selection);
+    var match = selection.text.match('\\(.*\\)');
+    if (!match) {
+        return '<span>' + selection.text + '</span>';
+    }
+    return $('<span>' + match.input.slice(0, match.index) + '<span class="main__projects_search__order">' + match[0] + '</span></span>');
 }
 
 $(document).ready(function() {
@@ -10,15 +15,15 @@ $(document).ready(function() {
         placeholder: $('.dashboard-panel__user-online').data('usersOnline'),
         allowClear: true,
         minimumResultsForSearch: -1,
-        dropdownCssClass: 'select2-dropdown__option',
+        dropdownCssClass: 'select2-dropdown__option dashboard-panel-dropdown__option',
         width: '173px'
     });
-    $('.dashboard-panel__user-online-2').select2({
-        placeholder: $('.dashboard-panel__user-online').data('usersOnline'),
-        allowClear: true,
+    $('.main__projects_search').select2({
+        allowClear: false,
         minimumResultsForSearch: -1,
-        dropdownCssClass: 'dashboard-panel__user-online__dropdown',
-        width: '173px',
-        templateSelection: formatSelectionWithSpan
+        dropdownCssClass: 'select2-dropdown__option main__search-dropdown__option',
+        width: '229px',
+        templateSelection: formatSelectionParenthesesWithSpan,
+        templateResult: formatSelectionParenthesesWithSpan
     });
 });

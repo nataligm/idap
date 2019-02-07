@@ -1,19 +1,33 @@
 //dashboard panel******************************************
 .select2-container--default
   .select2-dropdown__option
-    background-color: #f1f1f1
+    background-color: #ffffff
     .select2-results__option
-      background-color: #f1f1f1
+      background-color: #ffffff
       color: #4b4b4b
       font-family: "Freight Sans Pro Semibold", sans-serif
       font-size: 14px
       line-height: 20px
-      text-transform: uppercase
       font-weight: 400
       letter-spacing: -0.35px
     .select2-results__option.select2-results__option--highlighted[aria-selected]
       background-color: #777777
+      color: #ffffff
+
+.select2-container--default
+  .select2-dropdown__option.dashboard-panel-dropdown__option
+    background-color: #f1f1f1
+    .select2-results__option
+      background-color: #f1f1f1
+      text-transform: uppercase
+    .select2-results__option.select2-results__option--highlighted[aria-selected]
+      background-color: #777777
       color: #f1f1f1
+
+.select2-container--default
+  .select2-dropdown__option.main__search-dropdown__option
+    .select2-results__option
+      font-weight: bold
 
 .select2.select2-container.select2-container--default.select2-container--open
   .select2-selection.select2-selection--single
@@ -28,19 +42,19 @@
         border-width: 0 2px 2px 0
         transform: rotate(225deg)
         right: 13px
-        top: 16px
+        top: 17px
 .select2.select2-container.select2-container--default
   .select2-selection__arrow
     display: none
   .select2-selection.select2-selection--single
     border: none
-    background-color: #f1f1f1
+    background-color: rgba(255, 255, 255, 0)
     padding: 0
     .select2-selection__rendered
       width: 100%
       box-sizing: border-box
       display: inline-block
-      background-color: #f1f1f1
+      background-color: #ffffff
       padding: 9px 27px 9px 38px
       border-radius: 50px 50px 50px 50px
       box-shadow: 0 1px 0 rgba(255, 255, 255, 0.52)
@@ -49,18 +63,10 @@
       font-family: "Freight Sans Pro Semibold", sans-serif
       font-size: 14px
       line-height: 20px
-      text-transform: uppercase
       position: relative
       float: right
       font-weight: 400
       letter-spacing: -0.35px
-      &:before
-        content: url("../images/icon.png")
-        position: absolute
-        top: 10px
-        left: 16px
-        width: 18px
-        height: 18px
       &:after
         content: ''
         position: absolute
@@ -70,7 +76,7 @@
         border-width: 0 2px 2px 0
         transform: rotate(45deg)
         right: 13px
-        top: 13px
+        top: 14px
       .select2-selection__clear
         color: #a6a6a6
       .select2-selection__placeholder
@@ -124,6 +130,27 @@
       margin-right: 7px
     .dashboard-panel__user-online
       width: 100%
+
+    .select2-container--default
+      .select2-dropdown__option
+        background-color: #f1f1f1
+        .select2-results__option
+          background-color: #f1f1f1
+
+    .select2.select2-container.select2-container--default
+      .select2-selection.select2-selection--single
+        background-color: #f1f1f1
+        .select2-selection__rendered
+          background-color: #f1f1f1
+          text-transform: uppercase
+          &:before
+            content: url("../images/icon.png")
+            position: absolute
+            top: 10px
+            left: 16px
+            width: 18px
+            height: 18px
+
     .dashboard-panel__arrow
       width: 5px
       height: 5px
@@ -222,7 +249,9 @@
   &:after
     @include gray_arrow
 
-.main__descending
+.main__projects_search
+  width: 100%
+.main__projects_search__order
   font-weight: normal
 
 .main__task_active
@@ -307,6 +336,14 @@
 .main__actions
   display: flex
   font-weight: bold
+  .select2.select2-container.select2-container--default
+    .select2-selection.select2-selection--single
+      .select2-selection__rendered
+        padding-left: 21px
+        font-weight: bold
+        color: #4b4b4b
+        font-family: "Freight Sans Pro Semibold"
+        font-size: 16px
 
 .main__tag
   font-size: 14px
