@@ -386,6 +386,11 @@
   padding: 12px 18px 10px
   border: 1px solid rgba(164, 164, 164, 0.53)
 
+.main__actions
+  &:nth-child(3)
+    .main__tag
+      padding: 9px 17px 9px
+
 .main__tag, .main__show
   margin-right: 8px
 
@@ -423,6 +428,7 @@
 .main__subtasks
   background-color: #f1f1f1
   display: none
+
 .main___subtasks-member, .main___subtasks-member_offline
   width: 33px
   height: 33px
@@ -478,4 +484,5 @@
     position: relative
     &:before
       @include main__subtask-arrow
-
+.main__subtasks__time
+  font-weight: 400
