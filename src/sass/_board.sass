@@ -166,6 +166,7 @@
   border: 1px solid #eaeaea
   .members
     overflow-y: auto
+    overflow-x: hidden
     height: 100%
 
 .member-column__info
@@ -227,28 +228,28 @@
   border: 1px solid #eaeaea
   .main_tasks
     overflow-y: auto
+    overflow-x: hidden
     height: 100%
 
-.main__task, .main__task-expanded, .main__seacrh-panel
+.main__task, .main__task-expanded, .main__search-panel
   border: 1px solid #eaeaea
   box-sizing: border-box
   width: 100%
-  flex-direction: column
   padding: 0
-.main__seacrh-panel
-  padding: 11px 30px
+.main__search-panel
+  padding: 25px 30px
   display: flex
   justify-content: space-between
 
 .main__search-container
-  width: 41%
+  width: 55%
   display: flex
   align-items: center
   color: #4b4b4b
 
   input
     width: 100%
-    height: 25px
+    height: 50px
     letter-spacing: -0.55px
     font-size: 22px
     padding-right: 30px
@@ -368,6 +369,7 @@
   display: flex
   font-weight: bold
   .select2.select2-container.select2-container--default
+    margin-right: 10px
     .select2-selection.select2-selection--single
       .select2-selection__rendered
         padding-left: 21px
