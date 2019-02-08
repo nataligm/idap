@@ -67,6 +67,11 @@ gulp.task('images', function() {
         .pipe(gulp.dest('./dist/images/'));
 });
 
+gulp.task('fonts', function() {
+    gulp.src('./src/fonts/**/*.*')
+        .pipe(gulp.dest('./dist/fonts/'));
+});
+
 // збірка сторінки з шаблонів
 gulp.task('fileinclude', function() {
     gulp.src('./src/pages/**/*.html')
@@ -113,10 +118,10 @@ gulp.task('clean', function() {
 // sass - для компіляції sass в css, тому що браузер 
 // не розуміє попередній синтаксис,
 // fileinclude - для того щоб з маленьких шаблонів зібрати повну сторінку
-gulp.task('default', ['server', 'sass', 'js', 'images', 'fileinclude']);
+gulp.task('default', ['server', 'sass', 'js', 'images', 'fonts', 'fileinclude']);
 
 // при виклику команди gulp production
 // будуть стиснуті всі ресурси в папку public
 // після чого командою gulp deploy їх можна опублікувати на github
-gulp.task('production', ['minify:css', 'minify:js', 'images', 'fileinclude']);
+gulp.task('production', ['minify:css', 'minify:js', 'images', 'fonts', 'fileinclude']);
 
