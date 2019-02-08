@@ -29,8 +29,6 @@ $(document).ready(function() {
 
     $('.main__show').on('click', function () {
         var taskContainer = $(this).parent().parent().parent();
-        console.log(taskContainer);
-        console.log(taskContainer.hasClass('main__task'));
         if (taskContainer.hasClass('main__task_active')) {
             taskContainer.find('.main__subtasks').hide();
             taskContainer.removeClass('main__task_active');
