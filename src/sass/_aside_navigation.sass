@@ -11,8 +11,6 @@
   box-sizing: border-box
   padding: 30px 20px
   overflow-y: auto
-  //min-height: 820px
-  //employer asked min-height
 .sidebar__item
   position: relative
   display: flex
@@ -33,7 +31,6 @@
   .sidebar__item-notifications_empty
     display: none
 .sidebar__first-part
-  //margin-bottom: 50px
   .sidebar__avatar
     .sidebar__item-notifications_active
       top: 1px
@@ -67,8 +64,6 @@
       content: url("../images/icons/settings_icon.png")
       left: 23px
 .sidebar__second-part
-
-
   .sidebar__upgrade
     &:before
       @include sidebar_icon
@@ -78,7 +73,6 @@
       @include dots_decoration
   .sidebar__logout
     margin-bottom: 0
-    //doesn't work
     &:before
       @include sidebar_icon
       content: url("../images/icons/logout_icon.png")
