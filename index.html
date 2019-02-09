@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta charset="UTF-8">
+	<title>IDAP test dashboard</title>
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+
+
+
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+    <div class="sidebar__first-part">
+        <div class="sidebar__item sidebar__avatar">
+            <a href="#">
+                <figure class="sidebar__my-page-link">
+                    <img src="./images/avatar.jpg" alt="img">
+                </figure>
+            </a>
+            <div class="sidebar__item-notifications_active">2</div>
+        </div>
+        <div class="sidebar__item sidebar__board">
+            Board
+            <div class="sidebar__item-notifications_empty">0</div>
+        </div>
+        <div class="sidebar__item sidebar__projects">
+            Projects
+            <div class="sidebar__item-notifications">9</div>
+        </div>
+        <div class="sidebar__item sidebar__settings">Settings</div>
+    </div>
+    <div class="sidebar__second-part">
+        <div class="sidebar__item sidebar__upgrade">
+            Upgrade
+            <div class="sidebar__item-notifications_active">3</div>
+        </div>
+        <div class="sidebar__item sidebar__logout">Logout</div>
+    </div>
+</aside>
+
+        <div class="main-wrap">
+    <div class="dashboard-panel">
+    <div class="dashboard-panel__leftside clearfix">
+        <a href="#" class="dashboard-panel__button_round-red"></a>
+        <a href="#" class="dashboard-panel__button_oval-white">Dashboard</a>
+    </div>
+    <div class="dashboard-panel__rightside clearfix">
+        <a href="#" class="dashboard-panel__button_round-green">
+            <div class="dashboard-panel__arrow">
+
+            </div>
+        </a>
+        <select class="dashboard-panel__user-online" data-users-online="5 User ONLINE">
+            <option value=""></option>
+            <option value="1">Mark P.</option>
+            <option value="2">Marvin S.</option>
+            <option value="3">Philip O.</option>
+            <option value="3">Benni I.</option>
+            <option value="3">Benni F.</option>
+        </select>
+    </div>
+</div>
+    <div class="main-wrap__tabs">
+        <div class="main-wrap__tabs-only">
+            <div class="main-wrap__tabs__projects active-tab">
+                Active Projects
+                <div class="main-wrap__item-notifications">9</div>
+            </div>
+            <div class="main-wrap__tabs__messenger">
+                Messenger
+                <div class="main-wrap__item-notifications_active">2</div>
+            </div>
+        </div>
+        <div class="main-wrap__description">Search Project, User, Task, etc...</div>
+    </div>
+
+    <div class="main__block-wrapper">
+        <main class="main">
+            <div class="main__search-panel">
+                <div class="main__search-container">
+                    <input type="search" placeholder="Search a Project with Name, Task, User..." name="search">
+                </div>
+                <div class="main__actions">
+                    <select class="main__projects_search">
+                        <option value="1">New Projects (descending)</option>
+                        <option value="2">Old Projects (ascending)</option>
+                        <option value="2">Min Сompleteness (ascending)</option>
+                        <option value="2">Max Сompleteness (descending)</option>
+                    </select>
+                    <div class="main__search-panel_plus-projects"></div>
+                </div>
+            </div>
+            <div class="main_tasks">
+                <div class="main__task">
+                    <div class="main__info-actions">
+                        <div class="main__info">
+                            <div class="main__ready-percent">23%</div>
+                            <div class="main__task-title">Create Contact Formular</div>
+                        </div>
+                        <div class="main__actions">
+                            <div class="main__tag">Worlda</div>
+                            <div class="main__show"></div>
+                            <div class="main__expand"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="main__task">
+                    <div class="main__info-actions">
+                        <div class="main__info">
+                            <div class="main__ready-percent">87%</div>
+                            <div class="main__task-title">Create Subpage PSD</div>
+                        </div>
+                        <div class="main__actions">
+                            <div class="main__tag">Panorama</div>
+                            <div class="main__show"></div>
+                            <div class="main__expand"></div>
+                        </div>
+                    </div>
+                    <div class="main__subtasks">
+                        <div class="main___subtasks__task">
+                            <div class="main__info">
+                                <div class="main__subtask_ready-percent">66%</div>
+                                <div class="main__task-title">Creating the Context</div>
+                            </div>
+                            <div class="main__actions">
+                                <figure class="main___subtasks-member">
+                                    <img src="./images/markP.png" alt="member-photo">
+                                </figure>
+                                <figure class="main___subtasks-member">
+                                    <img src="./images/avatar.jpg" alt="member-photo">
+                                </figure>
+                                <figure class="main___subtasks-member_offline">
+                                    <img src="./images/sebastianK.png" alt="member-photo"></figure>
+                                <div class="main___subtasks__more-users">&#43;3</div>
+                                <div class="main__tag-date expired">Today,
+                                    <span class="main__subtasks__time">13:40</span> PM
+                                </div>
+                                <div class="main__show"></div>
+                            </div>
+                        </div>
+                        <div class="main___subtasks__task">
+                            <div class="main__info">
+                                <div class="main__ready-percent">Ready</div>
+                                <div class="main__task-title_crossed-out">Implementation in the Layout</div>
+                            </div>
+                            <div class="main__actions">
+
+                                <figure class="main___subtasks-member">
+                                    <img src="./images/avatar.jpg" alt="member-photo">
+                                </figure>
+                                <figure class="main___subtasks-member_offline">
+                                    <img src="./images/sebastianK.png" alt="member-photo"></figure>
+                                <div class="main__tag-date expired">Yestarday,
+                                    <span class="main__subtasks__time">12:40</span> PM
+                                </div>
+                                <div class="main__show"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__task">
+                    <div class="main__info-actions">
+                        <div class="main__info">
+                            <div class="main__ready-percent">83%</div>
+                            <div class="main__task-title">Layout & implementation in HTML & CSS
+                            </div>
+                        </div>
+                        <div class="main__actions">
+                            <div class="main__tag">Ebay Relaunch</div>
+                            <div class="main__show"></div>
+                            <div class="main__expand"></div>
+                        </div>
+                    </div>
+                    <div class="main__subtasks">
+                        <div class="main___subtasks__task">
+                            <div class="main__info">
+                                <div class="main__subtask_ready-percent">66%</div>
+                                <div class="main__task-title">Creating the Context</div>
+                            </div>
+                            <div class="main__actions">
+                                <figure class="main___subtasks-member">
+                                    <img src="./images/markP.png" alt="member-photo">
+                                </figure>
+                                <figure class="main___subtasks-member">
+                                    <img src="./images/avatar.jpg" alt="member-photo">
+                                </figure>
+                                <figure class="main___subtasks-member_offline">
+                                    <img src="./images/sebastianK.png" alt="member-photo"></figure>
+                                <div class="main___subtasks__more-users">&#43;3</div>
+                                <div class="main__tag-date expired">Today,
+                                    <span class="main__subtasks__time">13:40</span> PM
+                                </div>
+                                <div class="main__show"></div>
+                            </div>
+                        </div>
+                        <div class="main___subtasks__task">
+                            <div class="main__info">
+                                <div class="main__ready-percent">Ready</div>
+                                <div class="main__task-title_crossed-out">Implementation in the Layout</div>
+                            </div>
+                            <div class="main__actions">
+
+                                <figure class="main___subtasks-member">
+                                    <img src="./images/avatar.jpg" alt="member-photo">
+                                </figure>
+                                <figure class="main___subtasks-member_offline">
+                                    <img src="./images/sebastianK.png" alt="member-photo"></figure>
+                                <div class="main__tag-date expired">Yestarday,
+                                    <span class="main__subtasks__time">12:40 </span>PM
+                                </div>
+                                <div class="main__show"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__task">
+                    <div class="main__info-actions">
+                        <div class="main__info">
+                            <div class="main__ready-percent">23%</div>
+                            <div class="main__task-title">Lorem ipsum dolor sit amet, elitr, sed diam<br>
+                                nonumy eirmod tempor
+                            </div>
+                        </div>
+                        <div class="main__actions">
+                            <div class="main__tag">Panorama</div>
+                            <div class="main__show"></div>
+                            <div class="main__expand"></div>
+                        </div>
+                    </div>
+                    <div class="main__subtasks">
+                        <div class="main___subtasks__task">
+                            <div class="main__info">
+                                <div class="main__subtask_ready-percent">66%</div>
+                                <div class="main__task-title">Creating the Context</div>
+                            </div>
+                            <div class="main__actions">
+                                <figure class="main___subtasks-member">
+                                    <img src="./images/markP.png" alt="member-photo">
+                                </figure>
+                                <figure class="main___subtasks-member">
+                                    <img src="./images/avatar.jpg" alt="member-photo">
+                                </figure>
+                                <figure class="main___subtasks-member_offline">
+                                    <img src="./images/sebastianK.png" alt="member-photo"></figure>
+                                <div class="main___subtasks__more-users">&#43;3</div>
+                                <div class="main__tag-date expired">Today,
+                                    <span class="main__subtasks__time">13:40</span> PM
+                                </div>
+                                <div class="main__show"></div>
+                            </div>
+                        </div>
+                        <div class="main___subtasks__task">
+                            <div class="main__info">
+                                <div class="main__ready-percent">Ready</div>
+                                <div class="main__task-title_crossed-out">Implementation in the Layout</div>
+                            </div>
+                            <div class="main__actions">
+                                <figure class="main___subtasks-member">
+                                    <img src="./images/avatar.jpg" alt="member-photo">
+                                </figure>
+                                <figure class="main___subtasks-member_offline">
+                                    <img src="./images/sebastianK.png" alt="member-photo"></figure>
+                                <div class="main__tag-date expired">Yestarday,
+                                    <span class="main__subtasks__time">12:40</span> PM
+                                </div>
+                                <div class="main__show"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__task">
+                    <div class="main__info-actions">
+                        <div class="main__info">
+                            <div class="main__ready-percent">98%</div>
+                            <div class="main__task-title">Create Contact Formular</div>
+                        </div>
+                        <div class="main__actions">
+                            <div class="main__tag">Worlda</div>
+                            <div class="main__show"></div>
+                            <div class="main__expand"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__task">
+                    <div class="main__info-actions">
+                        <div class="main__info">
+                            <div class="main__ready-percent">98%</div>
+                            <div class="main__task-title">Create Contact Formular</div>
+                        </div>
+                        <div class="main__actions">
+                            <div class="main__tag">Worlda</div>
+                            <div class="main__show"></div>
+                            <div class="main__expand"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__task">
+                    <div class="main__info-actions">
+                        <div class="main__info">
+                            <div class="main__ready-percent">98%</div>
+                            <div class="main__task-title">Create Contact Formular</div>
+                        </div>
+                        <div class="main__actions">
+                            <div class="main__tag">Worlda</div>
+                            <div class="main__show"></div>
+                            <div class="main__expand"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__active-project">
+                Project Archiv
+            </div>
+        </main>
+
+        <div class="member-column">
+    <!--first member-->
+    <div class="members">
+        <div class="member-column__info">
+
+            <figure class="member-column__photo_online">
+                <img src="./images/markP.png" alt="member-photo">
+            </figure>
+            <div class="member-column__message">
+                <p class="member-column__sentence">
+                    <span class="member-column__name">Mark P.</span>
+                    add an Image into Worlda</p>
+                <p class="member-column__date">Today, 10:30 PM</p>
+            </div>
+
+        </div>
+        <!--second member-->
+        <div class="member-column__info">
+
+            <figure class="member-column__photo_online">
+                <img src="./images/marvinS.png" alt="member-photo">
+            </figure>
+            <div class="member-column__message">
+                <p class="member-column__sentence">
+                    <span class="member-column__name">Marvin S.</span>
+                    add an Image into Worlda</p>
+                <p class="member-column__date">Today, 10:30 PM</p>
+            </div>
+
+        </div>
+        <!--third member-->
+        <div class="member-column__info">
+            <figure class="member-column__photo_offline">
+                <img src="./images/sebastianK.png" alt="member-photo">
+            </figure>
+            <div class="member-column__message">
+                <p><span class="member-column__name">Sebastian K.</span>
+                    add an Image into Worlda</p>
+                <p class="member-column__date">Today, 10:30 PM</p>
+            </div>
+        </div>
+        <!--fourth member-->
+        <div class="member-column__info">
+
+            <figure class="member-column__photo_online">
+                <img src="./images/markP.png" alt="member-photo">
+            </figure>
+            <div class="member-column__message">
+                <p class="member-column__sentence">
+                    <span class="member-column__name">Mark P.</span>
+                    add an Image into Worlda</p>
+                <p class="member-column__date">Today, 10:30 PM</p>
+            </div>
+
+        </div>
+        <!--fifth member-->
+        <div class="member-column__info">
+            <figure class="member-column__photo_online">
+                <img src="./images/philipO.png" alt="member-photo">
+            </figure>
+            <div class="member-column__message">
+                <div class="member-column__message">
+                    <p class="member-column__sentence">
+                        <span class="member-column__name">Philip O.</span>
+                        add an Image into Worlda
+                    </p>
+                    <p class="member-column__date">Today, 10:30 PM</p>
+                </div>
+            </div>
+        </div>
+        <!--sixth member-->
+        <div class="member-column__info">
+
+            <figure class="member-column__photo_online">
+                <img src="./images/markP.png" alt="member-photo">
+            </figure>
+            <div class="member-column__message">
+                <p class="member-column__sentence">
+                    <span class="member-column__name">Mark P.</span>
+                    add an Image into Worlda</p>
+                <p class="member-column__date">Today, 10:30 PM</p>
+            </div>
+
+        </div>
+        <!--seventh member-->
+        <div class="member-column__info">
+
+            <figure class="member-column__photo_online">
+                <img src="./images/benniI.png" alt="member-photo">
+            </figure>
+            <div class="member-column__message">
+                <p class="member-column__sentence">
+                    <span class="member-column__name">Benni I.</span>
+                    add an Image into Worlda</p>
+                <p class="member-column__date">Today, 10:30 PM</p>
+            </div>
+
+        </div>
+        <!--eighth member-->
+        <div class="member-column__info">
+
+            <figure class="member-column__photo_online">
+                <img src="./images/benniI.png" alt="member-photo">
+            </figure>
+            <div class="member-column__message">
+                <p class="member-column__sentence">
+                    <span class="member-column__name">Benni I.</span>
+                    add an Image into Worlda</p>
+                <p class="member-column__date">Today, 10:30 PM</p>
+            </div>
+
+        </div>
+        <!--ninth member-->
+        <div class="member-column__info">
+
+            <figure class="member-column__photo_online">
+                <img src="./images/markP.png" alt="member-photo">
+            </figure>
+            <div class="member-column__message">
+                <p class="member-column__sentence">
+                    <span class="member-column__name">Benni I.</span>
+                    add an Image into Worlda</p>
+                <p class="member-column__date">Today, 10:30 PM</p>
+            </div>
+
+        </div>
+        <!--tenth member-->
+        <div class="member-column__info">
+
+            <figure class="member-column__photo_online">
+                <img src="./images/benniI.png" alt="member-photo">
+            </figure>
+            <div class="member-column__message">
+                <p class="member-column__sentence">
+                    <span class="member-column__name">Benni I.</span>
+                    add an Image into Worlda</p>
+                <p class="member-column__date">Today, 10:30 PM</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="member-column__activity">Activity Archiv</div>
+</div>
+    </div>
+</div>
+    </div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/select2.min.js"></script>
+<script src="./js/main.js"></script>
+</html>
